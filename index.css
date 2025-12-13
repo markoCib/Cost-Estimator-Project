@@ -46,8 +46,9 @@ h1{
     cursor: pointer;
 }
 
-.tabs p.active{
+.tabs .active{
     color: rgb(83,49,156);
+    position: relative;
 }
 
 .line{
@@ -55,7 +56,17 @@ h1{
     width: 100%;
     top: 98px;
     position: absolute;
-
     background-color: rgb(231,231,231);
+}
 
+.tabs .active::before{
+    content: "";
+    width: 200%;
+    height: 4px;
+    background-color: rgb(83,49,156);
+    position: absolute;
+    bottom: -15px;
+    z-index: 2;
+    left: -50%;
+    border-radius: 10px;
 }
